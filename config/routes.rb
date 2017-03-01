@@ -55,9 +55,10 @@ Rails.application.routes.draw do
   #------------------------------
 
   # Routes for the Users resource:
-  get "/my_likes", :controller => "users", :action => "my_likes"
+
   get "/users", :controller =>"users", :action => "index"
   get "/users/:id", :controller =>"users", :action => "show"
+  get "/my_likes", :controller => "users", :action => "my_likes"
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 

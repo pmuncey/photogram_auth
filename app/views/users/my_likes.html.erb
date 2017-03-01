@@ -4,10 +4,13 @@
 <% @my_likes.each do |my_like| %>
 <table>
   <tr>
-    <img src="<%= my_like.image %>">
+    <img src="<%= @my_like.photo_id %>">
   </tr>
   <tr>
-    <td><%= my_like.caption %> </td>
+    <img src="<%= @my_like.image %>">
+  </tr>
+  <tr>
+    <td><%= @my_like.caption %> </td>
   </tr>
 </table>
 
