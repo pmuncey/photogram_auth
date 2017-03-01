@@ -11,4 +11,12 @@ class UsersController < ApplicationController
 
     render("users/show.html.erb")
   end
+
+  def my_likes
+    @my_likes = current_user.liked_photos
+    if current_user !=nil
+    render("my_likes")
+    else redirect_to("index")
+    end
+  end
 end

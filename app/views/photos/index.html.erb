@@ -9,14 +9,20 @@
         <th>Caption</th>
         <th>Image</th>
         <th>User</th>
+        <th>Username</th>
+        <th>Time elapsed</th>
         <th>Actions</th>
       </tr>
+
+
 
       <% @photos.each do |photo| %>
       <tr class="panel">
         <td><%= photo.caption %></td>
         <td><img src="<%= photo.image %>" width="200" height="200"</td>
         <td><%= photo.user_id %></td>
+        <td><%= photo.user.username %></td>
+        <td><%= time_ago_in_words(photo.updated_at) %>
         <% if current_user.id == photo.id %>
         <td>
           <a href="/photos/<%= photo.id %>" class="btn btn-primary">Show</a>

@@ -1,0 +1,14 @@
+<h1>My Likes</h1>
+
+
+<% @my_likes.each do |my_like| %>
+<table>
+  <tr>
+    <img src="<%= my_like.image %>">
+  </tr>
+  <tr>
+    <td><%= my_like.caption %> </td>
+  </tr>
+</table>
+
+<% end %>

@@ -55,6 +55,7 @@ Rails.application.routes.draw do
   #------------------------------
 
   # Routes for the Users resource:
+  get "/my_likes", :controller => "users", :action => "my_likes"
   get "/users", :controller =>"users", :action => "index"
   get "/users/:id", :controller =>"users", :action => "show"
 
@@ -62,6 +63,6 @@ Rails.application.routes.draw do
 
   # MY LIKES
 
-  get "/my_likes", :controller => "mlikes", :action => "index"
+
 
 end
