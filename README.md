@@ -102,7 +102,7 @@ Below I suggest a plan of attack. Try to imagine, as you go through it, how each
 
     ```bash
     rails generate starter:resource photo caption:text image:string user_id:integer
-    rails generate starter:resource like user_id:integer photo_id:integer
+    
     rails generate starter:resource comment photo_id:integer body:text user_id:integer
     ```
 

@@ -1,0 +1,42 @@
+<h1><%= @user.username %></h1>
+
+<h3>Details</h3>
+
+<div>
+  <div>
+    <label for="user_id" class="control-label">
+      User Id
+    </label>
+  </div>
+  <div>
+    <%= @user.id %>
+  </div>
+  <div>
+    <label for="user_email" class="control-label">
+      Email
+    </label>
+  </div>
+  <div>
+    <%= @user.email %>
+  </div>
+  <div>
+    <label for="user_username" class="control-label">
+      Username
+    </label>
+  </div>
+  <div>
+    <%= @user.username %>
+  </div>
+</div>
+
+
+<h3>Photos</h3>
+<% @user.photos.each do |photo| %>
+    <%= photo.user_id %>
+    <%= photo.caption %>
+    <img src = "<%= photo.image %>">
+  <% end %>
+
+
+
+ <!-- 1. Create an RCAV: When I visit [http://localhost:3000/users/1](http://localhost:3000/users/1), I should see the details of user #1 along with all of his or her photos. Once done, add a link to the navbar that leads to the current user's show page. (This may lead to a problem when no one is signed in - how can you fix it? Also, be careful where you add this route in `routes.rb` - it needs to be below the line `devise_for :users`, otherwise it will conflict with `/users/sign_in` and `/users/sign_up`.) -->
