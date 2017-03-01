@@ -1,16 +1,13 @@
 <h1>My Likes</h1>
 
 
-<% @my_likes.each do |my_like| %>
+<% @my_liked_photos.each do |liked_photo| %>
 <table>
   <tr>
-    <img src="<%= @my_like.photo_id %>">
+    <img src="<%= liked_photo.image %>">
   </tr>
   <tr>
-    <img src="<%= @my_like.image %>">
-  </tr>
-  <tr>
-    <td><%= @my_like.caption %> </td>
+    <td><%= liked_photo.caption %> </td>
   </tr>
 </table>
 

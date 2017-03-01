@@ -71,11 +71,11 @@
   <% end %>
             </li>
 
-      
+
 
               <td><%= photo.user_id %></td>
               <td><%= photo.user.username %></td>
-              <td><%= time_ago_in_words(photo.updated_at) %>
+              <td><%= time_ago_in_words(photo.updated_at) %> ago</td>
                 <% if current_user.id == photo.id %>
                 <td>
                   <a href="/photos/<%= photo.id %>" class="btn btn-primary">Show</a>
